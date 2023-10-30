@@ -1,10 +1,21 @@
 /* master.css */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+
 :root {
     --primary-color: #075AAB;
     --secondary-color: #ff4a4a;
     --background-color: #f0f0f0;
     --text-color: #333;
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Alexandria', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -15,15 +26,6 @@ a {
 
 a:hover {
     color: var(--secondary-color);
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font-family);
-    text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
 footer {
@@ -61,4 +63,9 @@ form, img, .project {
 .project img {
     border: 2px solid var(--primary-color);
     border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project img:hover {
+    transform: scale(1.05);  /* Slightly enlarges the image on hover */
 }
